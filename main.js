@@ -20,49 +20,101 @@
 // Even though we'll USUALLY be calling this function with a number indicating the challenge we're on, THIS TIME call it with the parameter 'Banner Function Works!'. You should see the below result:
 //
 // ###### Challenge Banner Function Works! #####
+function challengeBanner (num) {
+    console.log (`###### Challenge ${num} #####`)
+}
 
-
+challengeBanner(1);
 // 2.
 //
 // Console out the numbers from 1-20, but only if they're divisible by 3.
 
 // Use `if` and a modulus operation.
+challengeBanner(2);
 
+for (i=1; i <= 20; i++){
+    if (i % 3 === 0){
+        console.log(i);
+    }
+}
 
 // 3.
 //
 // Same problem as #2, but no `if`s, `mods`, or `but`s (and no, `but` is not a JavaScript tool). There may be more ways to solve this problem without `if` or `%` (there usually are in JavaScript!), but if you did it the way we did, you should run the loop 6 times with console log per loop iteration.
+challengeBanner(3);
+let noIfsModsOrButs = 1
+while (i <= 20){
+    noIfsModsOrButs = (noIfsModsOrButs * 3) + 3;
+    console.log(noIfsModsOrButs);
+}
 
 
 
 // 4.
 //
 // Console out the numbers from 1-20. BACKWARDS.
-
+challengeBanner(4);
+for (i=20; i >= 1; i--){
+    console.log(i);
+}
 
 // 5.
 //
 // For the string 'Boy howdy am I good at this!', console out the letters
 // individually.
-
+challengeBanner(5);
+let stringIndividual = 'Boy howdy am I good at this!';
+let variableFiveChall = 0;
+while (variableFiveChall < stringIndividual.length){
+    console.log(stringIndividual[variableFiveChall]);
+    variableFiveChall++;
+}
 
 // 6.
 //
 // For the string, 'And getting better every day.', starting with the second
 // character, print out every third character.
-
+challengeBanner(6);
+let stringPrintEveryThirdChar = 'And getting better every day';
+let variableSixChall = 1;
+while(variableSixChall < stringPrintEveryThirdChar.length) {
+        console.log(stringPrintEveryThirdChar[variableSixChall]);
+        variableSixChall = variableSixChall + 3;
+}
 
 // 7. 
 //
 // For the string 'Am I the best?', console out the letters individually, AND
 // UPPERCASED.
-
+challengeBanner(7);
+let stringChallSeven = 'Am I the best?';
+let variableSevenChall = 0;
+while (variableSevenChall < stringChallSeven.length) {
+    console.log(stringChallSeven[variableSevenChall].toUpperCase());
+    variableSevenChall++;
+}
 
 // 8.
 //
 // For the string 'Whoa, I am the best!', console out the letters individually,
 // but also capitalize the letters in the third word.
+challengeBanner(8);
+let stringChallEight = 'Whoa, I am the Best!';
+let variableEightChall = 0;
+let space = 0;
+let newStrChallEight = ' ';
+while (variableEightChall < stringChallEight.length) {
+    if (stringChallEight[newStrChallEight] === ' ' ) {
+        space ++;
+    }
+    if (space === 2) {
+        stringChallEight.toUpperCase(' ');
+    }
+    if (space > 2 ) {
+        stringChallEight.toLowerCase();
+    }
 
+}
 
 // 9.
 //
