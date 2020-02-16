@@ -102,29 +102,61 @@ challengeBanner(8);
 let stringChallEight = 'Whoa, I am the Best!';
 let variableEightChall = 0;
 let space = 0;
-let newStrChallEight = ' ';
+let tempVariableEightBeforeThirdWord = 0;
+let tempVariableEightAfterThirdWord = 0;
+let newStrChallEightFirstTwoWords = '';
+let newStrChallEightThirdWord = '';
+let newStrChallEightAfterThirdWordWords = '';
 while (variableEightChall < stringChallEight.length) {
-    if (stringChallEight[newStrChallEight] === ' ' ) {
-        space ++;
-    }
-    if (space === 2) {
-        stringChallEight.toUpperCase(' ');
-    }
-    if (space > 2 ) {
-        stringChallEight.toLowerCase();
+    if (stringChallEight[variableEightChall] === ' ' ) {
+        space = space + 1;
+        if (space === 2) {
+            tempVariableEightBeforeThirdWord = variableEightChall
+        }
+        if (space === 3) {
+            tempVariableEightAfterThirdWord = variableEightChall
+        
+        newStrChallEightFirstTwoWords = stringChallEight.substring(0, tempVariableEightBeforeThirdWord);
+        newStrChallEightThirdWord = stringChallEight.substring(tempVariableEightBeforeThirdWord, tempVariableEightAfterThirdWord);
+        newStrChallEightThirdWord = newStrChallEightThirdWord.toUpperCase();
+        newStrChallEightAfterThirdWordWords = stringChallEight.substring(tempVariableEightAfterThirdWord, );
+    
+        console.log(newStrChallEightFirstTwoWords + newStrChallEightThirdWord + newStrChallEightAfterThirdWordWords)
+        console.log('final result');
+        }
     }
 
+    // console.log(space);
+    variableEightChall = variableEightChall + 1;
+
 }
+
+// if (space > 2 && space < 4) {
+    //         stringChallEight.toLowerCase();
+    //     }
+    // let intermediateSubStrVar = stringChallEight.split(intermediateVariableIndexOf);
+    // console.log(intermediateSubStrVar);
+    // console.log(stringChallEight.toUpperCase(intermediateVariableIndexOf, newStrChallEight));
+    // console.log(stringChallEight.toUpperCase(' '))
 
 // 9.
 //
 // For the string 'I am become death, destroyer of worlds.', console out the letters
 //  individually, but backwards. That is, the first console log should be
 // `.`, followed by `s`, followed by `d`, and so on.
-
+challengeBanner(9)
+let strChallNine = 'I am become death, destroyer of worlds'
+let varChallNine = strChallNine.length - 1;
+let backwardsStrChallNine = '';
+while (varChallNine >= 0) {
+    backwardsStrChallNine = strChallNine[varChallNine];
+    console.log(backwardsStrChallNine);
+    varChallNine = varChallNine - 1;
+}
 
 // 10.
 //
+challengeBanner(10)
 const names = 'Colin|Mesuara|Denis|Wilson|Michael|Patrick|DeAundre|Jumary|Marc|Bogdan|Sharod|David|LaToddra|Carlos';
 
 // Console out the individual letters of each person in class today, which are
@@ -134,6 +166,23 @@ const names = 'Colin|Mesuara|Denis|Wilson|Michael|Patrick|DeAundre|Jumary|Marc|B
 // You'll know you're at a new person's name when you hit the pipe character.
 
 // Don't print the pipes!
+let pipeChar = 0;
+let varChallTen = 0;
+while (varChallTen <= names.length) {
+    if (names[varChallTen] === '|'){
+        pipeChar = pipeChar + 1
+        
+        if (pipeChar === 1) {
+            console.log('Here today is:' + names.charAt(0));
+        }
+        if (pipeChar % 1 === 0) {
+            console.log('Here today is:' + names.charAt(varChallTen + 1));
+        }
+    }
+    varChallTen = varChallTen + 1;
+    
+}
+
 
 
 // 11.
